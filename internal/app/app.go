@@ -100,7 +100,7 @@ func Init(ctx context.Context, opts ...Option) (func(), error) {
 	// 初始化图形验证码
 	InitCaptcha()
 
-	// 初始化依赖注入器
+	// 初始化依赖注入器 https://github.com/google/wire
 	injector, injectorCleanFunc, err := BuildInjector()
 	if err != nil {
 		return nil, err

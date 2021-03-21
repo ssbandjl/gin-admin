@@ -39,7 +39,7 @@ func InitLogger() (func(), error) {
 			}
 		}
 	}
-
+	// 支持日志钩子写入到Gorm
 	var hook *loggerhook.Hook
 	if c.EnableHook {
 		var hookLevels []logrus.Level
