@@ -73,7 +73,7 @@ func Init(ctx context.Context, opts ...Option) (func(), error) {
 	for _, opt := range opts {
 		opt(&o)
 	}
-
+	// 加载配置文件到全局配置对象C
 	config.MustLoad(o.ConfigFile)
 	if v := o.ModelFile; v != "" {
 		config.C.Casbin.Model = v
